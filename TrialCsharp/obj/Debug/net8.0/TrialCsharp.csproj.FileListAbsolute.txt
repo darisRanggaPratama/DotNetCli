@@ -1,0 +1,15 @@
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/bin/Debug/net8.0/TrialCsharp
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/bin/Debug/net8.0/TrialCsharp.deps.json
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/bin/Debug/net8.0/TrialCsharp.runtimeconfig.json
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/bin/Debug/net8.0/TrialCsharp.dll
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/bin/Debug/net8.0/TrialCsharp.pdb
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.AssemblyInfoInputs.cache
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.AssemblyInfo.cs
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.csproj.CoreCompileInputs.cache
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.sourcelink.json
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.dll
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/refint/TrialCsharp.dll
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.pdb
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/TrialCsharp.genruntimeconfig.cache
+/Users/rangga/Documents/GitHub/DotNetCli/TrialCsharp/obj/Debug/net8.0/ref/TrialCsharp.dll
