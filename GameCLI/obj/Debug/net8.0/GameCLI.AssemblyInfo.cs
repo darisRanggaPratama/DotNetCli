@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameCLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81bdd4d9be595cc55ede264dc21e359c4a87d07b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8a7c88d3f3e773e3cf44fb1939ae5be0710a6b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameCLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameCLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

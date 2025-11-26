@@ -1,0 +1,15 @@
+D:\up2github\DotNetCli\GamesCLI\bin\Debug\net9.0\GamesCLI.exe
+D:\up2github\DotNetCli\GamesCLI\bin\Debug\net9.0\GamesCLI.deps.json
+D:\up2github\DotNetCli\GamesCLI\bin\Debug\net9.0\GamesCLI.runtimeconfig.json
+D:\up2github\DotNetCli\GamesCLI\bin\Debug\net9.0\GamesCLI.dll
+D:\up2github\DotNetCli\GamesCLI\bin\Debug\net9.0\GamesCLI.pdb
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.GeneratedMSBuildEditorConfig.editorconfig
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.AssemblyInfoInputs.cache
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.AssemblyInfo.cs
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.csproj.CoreCompileInputs.cache
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.sourcelink.json
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.dll
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\refint\GamesCLI.dll
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.pdb
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\GamesCLI.genruntimeconfig.cache
+D:\up2github\DotNetCli\GamesCLI\obj\Debug\net9.0\ref\GamesCLI.dll

@@ -65,7 +65,7 @@ public class GameEngine
 
     private void SpawnEnergy()
     {
-        string[] names = { "Goblin", "Orc", "Troll", "Slime" };
+        string[] names = ["Goblin", "Orc", "Troll", "Slime"];
         
         _enemy = new Enemy(name: names[Randomzer.Get(0, names.Length)], 
             health: Randomzer.Get(30, 70),

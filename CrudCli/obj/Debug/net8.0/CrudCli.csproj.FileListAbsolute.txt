@@ -1,0 +1,15 @@
+D:\up2github\DotNetCli\CrudCli\bin\Debug\net8.0\CrudCli.exe
+D:\up2github\DotNetCli\CrudCli\bin\Debug\net8.0\CrudCli.deps.json
+D:\up2github\DotNetCli\CrudCli\bin\Debug\net8.0\CrudCli.runtimeconfig.json
+D:\up2github\DotNetCli\CrudCli\bin\Debug\net8.0\CrudCli.dll
+D:\up2github\DotNetCli\CrudCli\bin\Debug\net8.0\CrudCli.pdb
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.GeneratedMSBuildEditorConfig.editorconfig
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.AssemblyInfoInputs.cache
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.AssemblyInfo.cs
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.csproj.CoreCompileInputs.cache
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.sourcelink.json
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.dll
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\refint\CrudCli.dll
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.pdb
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\CrudCli.genruntimeconfig.cache
+D:\up2github\DotNetCli\CrudCli\obj\Debug\net8.0\ref\CrudCli.dll

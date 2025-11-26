@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EI1YzaFDVaY=",
+  "success": true,
+  "projectFilePath": "D:\\up2github\\DotNetCli\\AnimasiTeksMatrix\\AnimasiTeksMatrix.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pongo\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
+  ],
+  "logs": []
+}

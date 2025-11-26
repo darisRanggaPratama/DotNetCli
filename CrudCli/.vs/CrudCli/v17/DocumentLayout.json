@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\up2github\\DotNetCli\\CrudCli\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D40E666-C249-46E0-A0B6-F4044730F45F}|CrudCli.csproj|d:\\up2github\\dotnetcli\\crudcli\\crudcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3D40E666-C249-46E0-A0B6-F4044730F45F}|CrudCli.csproj|solutionrelative:crudcli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrudCli",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCli\\CrudCli.csproj",
+              "RelativeDocumentMoniker": "CrudCli.csproj",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCli\\CrudCli.csproj",
+              "RelativeToolTip": "CrudCli.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T02:54:46.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

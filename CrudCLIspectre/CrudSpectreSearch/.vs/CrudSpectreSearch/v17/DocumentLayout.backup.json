@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\ui\\menuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:ui\\menuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\services\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:services\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\services\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:services\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|d:\\up2github\\dotnetcli\\crudclispectre\\crudspectresearch\\crudspectresearch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{77F10DC8-0F2F-4D61-9C19-2400C210FF07}|CrudSpectreSearch.csproj|solutionrelative:crudspectresearch.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuUI.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\UI\\MenuUI.cs",
+              "RelativeDocumentMoniker": "UI\\MenuUI.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\UI\\MenuUI.cs",
+              "RelativeToolTip": "UI\\MenuUI.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA7wBgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:08:39.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CrudSpectreSearch",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\CrudSpectreSearch.csproj",
+              "RelativeDocumentMoniker": "CrudSpectreSearch.csproj",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\CrudSpectreSearch.csproj",
+              "RelativeToolTip": "CrudSpectreSearch.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T22:08:17.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Services\\EmployeeService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswDgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:07:21.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Services\\IEmployeeRepository.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\IEmployeeRepository.cs",
+              "RelativeToolTip": "Services\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:06:20.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeRepository.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\EmployeeRepository.cs",
+              "RelativeToolTip": "Services\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:04:43.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "Services\\DatabaseService.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Services\\DatabaseService.cs",
+              "RelativeToolTip": "Services\\DatabaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:03:48.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:02:15.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\up2github\\DotNetCli\\CrudCLIspectre\\CrudSpectreSearch\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:57:34.129Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
