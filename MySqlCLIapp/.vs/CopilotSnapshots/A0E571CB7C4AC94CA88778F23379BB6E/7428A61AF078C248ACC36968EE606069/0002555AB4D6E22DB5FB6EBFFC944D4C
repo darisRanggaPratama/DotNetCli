@@ -1,0 +1,219 @@
+﻿using MySqlCLI.Models;
+using Spectre.Console;
+
+namespace MySqlCLI.Views;
+
+public class EmployeeView
+{
+    public void DisplayMainMenu()
+    {
+        AnsiConsole.Clear();
+        var panel = new Panel("[yellow]SISTEM MANAJEMEN KARYAWAN[/]")
+        {
+            Border = BoxBorder.Double,
+            Padding = new Padding(1, 0)
+        };
+        AnsiConsole.Write(panel);
+        AnsiConsole.WriteLine();
+    }
+
+    public string GetMenuChoice()
+    {
+        return AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+                .Title("[green]Pilih Menu:[/]")
+                .PageSize(12)
+                .AddChoices(new[]
+                {
+                    "1. Tampilkan Semua Karyawan",
+                    "2. Cari Karyawan",
+                    "3. Tambah Karyawan Baru",
+                    "4. Edit Karyawan",
+                    "5. Hapus Karyawan",
+                    "6. Import dari CSV",
+                    "7. Export ke CSV",
+                    "8. Keluar"
+                }));
+    }
+
+    public void DisplayEmployees(List<Employee> employees)
+    {
+        if (employees.Count == 0)
+        {
+            AnsiConsole.MarkupLine("[yellow]Tidak ada data karyawan.[/]");
+            return;
+        }
+
+        var table = new Table()
+            .Border(TableBorder.Rounded)
+            .AddColumn(new TableColumn("[yellow]Row ID[/]").Centered())
+            .AddColumn(new TableColumn("[yellow]ID Karyawan[/]").Centered())
+            .AddColumn(new TableColumn("[yellow]Nama[/]").LeftAligned())
+            .AddColumn(new TableColumn("[yellow]Gaji[/]").RightAligned())
+            .AddColumn(new TableColumn("[yellow]Status[/]").Centered());
+
+        foreach (var emp in employees)
+        {
+            var statusColor = emp.Status ? "green" : "red";
+            table.AddRow(
+                emp.RowId.ToString(),
+                emp.Id,
+                emp.Name,
+                emp.Salary.ToString("N2"),
+                $"[{statusColor}]{emp.StatusDisplay}[/]"
+            );
+        }
+
+        AnsiConsole.Write(table);
+        AnsiConsole.WriteLine();
+    }
+
+    public (string? id, string? name, decimal? salaryFrom, decimal? salaryTo, bool? status) GetSearchCriteria()
+    {
+        AnsiConsole.MarkupLine("[cyan]Masukkan kriteria pencarian (tekan Enter untuk melewati):[/]\n");
+
+        var id = AnsiConsole.Ask<string>("[grey]ID Karyawan:[/]", string.Empty);
+        if (string.IsNullOrWhiteSpace(id)) id = null;
+
+        var name = AnsiConsole.Ask<string>("[grey]Nama:[/]", string.Empty);
+        if (string.IsNullOrWhiteSpace(name)) name = null;
+
+        var salaryFromStr = AnsiConsole.Ask<string>("[grey]Gaji Minimal:[/]", string.Empty);
+        decimal? salaryFrom = null;
+        if (!string.IsNullOrWhiteSpace(salaryFromStr) && decimal.TryParse(salaryFromStr, out var sf))
+            salaryFrom = sf;
+
+        var salaryToStr = AnsiConsole.Ask<string>("[grey]Gaji Maksimal:[/]", string.Empty);
+        decimal? salaryTo = null;
+        if (!string.IsNullOrWhiteSpace(salaryToStr) && decimal.TryParse(salaryToStr, out var st))
+            salaryTo = st;
+
+        var statusStr = AnsiConsole.Ask<string>("[grey]Status (yes/no):[/]", string.Empty);
+        bool? status = null;
+        if (!string.IsNullOrWhiteSpace(statusStr))
+        {
+            if (statusStr.ToLower() == "yes" || statusStr == "1")
+                status = true;
+            else if (statusStr.ToLower() == "no" || statusStr == "0")
+                status = false;
+        }
+
+        return (id, name, salaryFrom, salaryTo, status);
+    }
+
+    public Employee GetNewEmployeeData()
+    {
+        AnsiConsole.MarkupLine("[cyan]Masukkan data karyawan baru:[/]\n");
+
+        var id = AnsiConsole.Ask<string>("[grey]ID Karyawan (max 6 digit):[/]");
+        while (id.Length > 6)
+        {
+            AnsiConsole.MarkupLine("[red]ID tidak boleh lebih dari 6 digit![/]");
+            id = AnsiConsole.Ask<string>("[grey]ID Karyawan (max 6 digit):[/]");
+        }
+
+        var name = AnsiConsole.Ask<string>("[grey]Nama:[/]");
+        var salary = AnsiConsole.Ask<decimal>("[grey]Gaji:[/]");
+
+        var statusStr = AnsiConsole.Confirm("[grey]Status Aktif?[/]", true);
+
+        return new Employee
+        {
+            Id = id,
+            Name = name,
+            Salary = salary,
+            Status = statusStr
+        };
+    }
+
+    public int GetRowIdForEdit()
+    {
+        return AnsiConsole.Ask<int>("[grey]Masukkan Row ID yang akan diedit:[/]");
+    }
+
+    public Employee GetUpdatedEmployeeData(Employee existing)
+    {
+        AnsiConsole.MarkupLine("[cyan]Edit data karyawan (tekan Shift+Delete untuk melewati):[/]\n");
+        AnsiConsole.MarkupLine("[grey]Tips: Untuk melewati field, ketik 'skip' atau tekan Enter[/]\n");
+
+        Console.WriteLine($"ID Karyawan (saat ini: {existing.Id}):");
+        var idInput = Console.ReadLine();
+        var id = string.IsNullOrWhiteSpace(idInput) || idInput.ToLower() == "skip" ? existing.Id : idInput;
+
+        while (id.Length > 6)
+        {
+            AnsiConsole.MarkupLine("[red]ID tidak boleh lebih dari 6 digit![/]");
+            Console.WriteLine($"ID Karyawan (saat ini: {existing.Id}):");
+            idInput = Console.ReadLine();
+            id = string.IsNullOrWhiteSpace(idInput) || idInput.ToLower() == "skip" ? existing.Id : idInput;
+        }
+
+        Console.WriteLine($"Nama (saat ini: {existing.Name}):");
+        var nameInput = Console.ReadLine();
+        var name = string.IsNullOrWhiteSpace(nameInput) || nameInput.ToLower() == "skip" ? existing.Name : nameInput;
+
+        Console.WriteLine($"Gaji (saat ini: {existing.Salary:N2}):");
+        var salaryInput = Console.ReadLine();
+        var salary = existing.Salary;
+        if (!string.IsNullOrWhiteSpace(salaryInput) && salaryInput.ToLower() != "skip")
+        {
+            if (decimal.TryParse(salaryInput, out var s))
+                salary = s;
+        }
+
+        Console.WriteLine($"Status (yes/no) (saat ini: {existing.StatusDisplay}):");
+        var statusInput = Console.ReadLine();
+        var status = existing.Status;
+        if (!string.IsNullOrWhiteSpace(statusInput) && statusInput.ToLower() != "skip")
+        {
+            if (statusInput.ToLower() == "yes" || statusInput == "1")
+                status = true;
+            else if (statusInput.ToLower() == "no" || statusInput == "0")
+                status = false;
+        }
+
+        return new Employee
+        {
+            RowId = existing.RowId,
+            Id = id,
+            Name = name,
+            Salary = salary,
+            Status = status
+        };
+    }
+
+    public int GetRowIdForDelete()
+    {
+        return AnsiConsole.Ask<int>("[grey]Masukkan Row ID yang akan dihapus:[/]");
+    }
+
+    public bool ConfirmDelete(Employee employee)
+    {
+        AnsiConsole.MarkupLine($"[yellow]Anda akan menghapus:[/]");
+        AnsiConsole.MarkupLine($"ID: {employee.Id}");
+        AnsiConsole.MarkupLine($"Nama: {employee.Name}");
+        return AnsiConsole.Confirm("[red]Yakin ingin menghapus?[/]", false);
+    }
+
+    public string GetCsvFilePath(bool isImport)
+    {
+        var action = isImport ? "import" : "export";
+        return AnsiConsole.Ask<string>($"[grey]Masukkan path file CSV untuk {action}:[/]");
+    }
+
+    public void ShowSuccessMessage(string message)
+    {
+        AnsiConsole.MarkupLine($"[green]✓ {message}[/]");
+    }
+
+    public void ShowErrorMessage(string message)
+    {
+        AnsiConsole.MarkupLine($"[red]✗ {message}[/]");
+    }
+
+    public void WaitForKeyPress()
+    {
+        AnsiConsole.MarkupLine("\n[grey]Tekan sembarang tombol untuk melanjutkan...[/]");
+        Console.ReadKey(true);
+    }
+}

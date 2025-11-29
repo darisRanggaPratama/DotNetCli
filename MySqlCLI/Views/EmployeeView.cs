@@ -55,12 +55,13 @@ public class EmployeeView
         foreach (var emp in employees)
         {
             var statusColor = emp.Status ? "green" : "red";
+            // Gunakan warna yang valid, jangan gunakan data dinamis sebagai style
             table.AddRow(
                 emp.RowId.ToString(),
                 emp.Id,
                 emp.Name,
                 emp.Salary.ToString("N2"),
-                $"[{statusColor}]{emp.StatusDisplay}[/]"
+                emp.Status ? "[green]Aktif[/]" : "[red]Tidak Aktif[/]"
             );
         }
 
@@ -126,51 +127,32 @@ public class EmployeeView
         };
     }
 
+
+    public int GetRowIdForDelete()
     public int GetRowIdForEdit()
     {
         return AnsiConsole.Ask<int>("[grey]Masukkan Row ID yang akan diedit:[/]");
     }
 
-    public Employee GetUpdatedEmployeeData(Employee existing)
+    public Employee GetEditEmployeeData(Employee existing)
     {
-        AnsiConsole.MarkupLine("[cyan]Edit data karyawan (tekan Shift+Delete untuk melewati):[/]\n");
-        AnsiConsole.MarkupLine("[grey]Tips: Untuk melewati field, ketik 'skip' atau tekan Enter[/]\n");
+        AnsiConsole.MarkupLine("[cyan]Edit Data Karyawan[/]");
+        AnsiConsole.MarkupLine($"Row ID: {existing.RowId}");
+        AnsiConsole.MarkupLine($"ID Karyawan: {existing.Id}");
+        AnsiConsole.MarkupLine($"Nama: {existing.Name}");
+        AnsiConsole.MarkupLine($"Gaji: {existing.Salary:N2}");
+        AnsiConsole.MarkupLine(existing.Status ? "Status: Aktif" : "Status: Tidak Aktif");
 
-        Console.WriteLine($"ID Karyawan (saat ini: {existing.Id}):");
-        var idInput = Console.ReadLine();
-        var id = string.IsNullOrWhiteSpace(idInput) || idInput.ToLower() == "skip" ? existing.Id : idInput;
-
+        var id = AnsiConsole.Ask<string>("ID Karyawan baru (Enter untuk tidak mengubah):", existing.Id);
         while (id.Length > 6)
         {
             AnsiConsole.MarkupLine("[red]ID tidak boleh lebih dari 6 digit![/]");
-            Console.WriteLine($"ID Karyawan (saat ini: {existing.Id}):");
-            idInput = Console.ReadLine();
-            id = string.IsNullOrWhiteSpace(idInput) || idInput.ToLower() == "skip" ? existing.Id : idInput;
+            id = AnsiConsole.Ask<string>("ID Karyawan baru (Enter untuk tidak mengubah):", existing.Id);
         }
 
-        Console.WriteLine($"Nama (saat ini: {existing.Name}):");
-        var nameInput = Console.ReadLine();
-        var name = string.IsNullOrWhiteSpace(nameInput) || nameInput.ToLower() == "skip" ? existing.Name : nameInput;
-
-        Console.WriteLine($"Gaji (saat ini: {existing.Salary:N2}):");
-        var salaryInput = Console.ReadLine();
-        var salary = existing.Salary;
-        if (!string.IsNullOrWhiteSpace(salaryInput) && salaryInput.ToLower() != "skip")
-        {
-            if (decimal.TryParse(salaryInput, out var s))
-                salary = s;
-        }
-
-        Console.WriteLine($"Status (yes/no) (saat ini: {existing.StatusDisplay}):");
-        var statusInput = Console.ReadLine();
-        var status = existing.Status;
-        if (!string.IsNullOrWhiteSpace(statusInput) && statusInput.ToLower() != "skip")
-        {
-            if (statusInput.ToLower() == "yes" || statusInput == "1")
-                status = true;
-            else if (statusInput.ToLower() == "no" || statusInput == "0")
-                status = false;
-        }
+        var name = AnsiConsole.Ask<string>("Nama baru (Enter untuk tidak mengubah):", existing.Name);
+        var salary = AnsiConsole.Ask<decimal>("Gaji baru (Enter untuk tidak mengubah):", existing.Salary);
+        var status = AnsiConsole.Confirm("Status aktif?", existing.Status);
 
         return new Employee
         {
@@ -181,17 +163,16 @@ public class EmployeeView
             Status = status
         };
     }
-
-    public int GetRowIdForDelete()
     {
         return AnsiConsole.Ask<int>("[grey]Masukkan Row ID yang akan dihapus:[/]");
     }
 
     public bool ConfirmDelete(Employee employee)
     {
-        AnsiConsole.MarkupLine($"[yellow]Anda akan menghapus:[/]");
+        AnsiConsole.MarkupLine("[yellow]Anda akan menghapus:[/]");
         AnsiConsole.MarkupLine($"ID: {employee.Id}");
         AnsiConsole.MarkupLine($"Nama: {employee.Name}");
+        AnsiConsole.MarkupLine(employee.Status ? "Status: [green]Aktif[/]" : "Status: [red]Tidak Aktif[/]");
         return AnsiConsole.Confirm("[red]Yakin ingin menghapus?[/]", false);
     }
 

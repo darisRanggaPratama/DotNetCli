@@ -20,7 +20,7 @@ public class DatabaseContext
         connection.Open();
 
         var createTableQuery = @"
-                CREATE TABLE IF NOT EXISTS employees (
+                CREATE TABLE IF NOT EXISTS employee (
                     row_id INT AUTO_INCREMENT PRIMARY KEY,
                     id VARCHAR(6) NOT NULL UNIQUE,
                     name VARCHAR(255) NOT NULL,
@@ -43,7 +43,7 @@ public class DatabaseContext
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        var query = "SELECT row_id, id, name, salary, status FROM employees ORDER BY row_id";
+        var query = "SELECT row_id, id, name, salary, status FROM employee ORDER BY row_id";
         using var command = new MySqlCommand(query, connection);
         using var reader = command.ExecuteReader();
 
@@ -60,7 +60,7 @@ public class DatabaseContext
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        var query = "SELECT row_id, id, name, salary, status FROM employees WHERE id = @id";
+        var query = "SELECT row_id, id, name, salary, status FROM employee WHERE id = @id";
         using var command = new MySqlCommand(query, connection);
         command.Parameters.AddWithValue("@id", id);
 
@@ -81,7 +81,7 @@ public class DatabaseContext
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        var query = "SELECT row_id, id, name, salary, status FROM employees WHERE 1=1";
+        var query = "SELECT row_id, id, name, salary, status FROM employee WHERE 1=1";
         var parameters = new List<MySqlParameter>();
 
         if (!string.IsNullOrEmpty(id))
@@ -135,7 +135,7 @@ public class DatabaseContext
             using var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "INSERT INTO employees (id, name, salary, status) VALUES (@id, @name, @salary, @status)";
+            var query = "INSERT INTO employee (id, name, salary, status) VALUES (@id, @name, @salary, @status)";
             using var command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", employee.Id);
             command.Parameters.AddWithValue("@name", employee.Name);
@@ -158,7 +158,7 @@ public class DatabaseContext
             connection.Open();
 
             var query =
-                "UPDATE employees SET id = @newId, name = @name, salary = @salary, status = @status WHERE id = @oldId";
+                "UPDATE employee SET id = @newId, name = @name, salary = @salary, status = @status WHERE id = @oldId";
             using var command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@oldId", oldId);
             command.Parameters.AddWithValue("@newId", employee.Id);
@@ -179,7 +179,7 @@ public class DatabaseContext
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        var query = "DELETE FROM employees WHERE id = @id";
+        var query = "DELETE FROM employee WHERE id = @id";
         using var command = new MySqlCommand(query, connection);
         command.Parameters.AddWithValue("@id", id);
 
@@ -194,7 +194,7 @@ public class DatabaseContext
         using var transaction = connection.BeginTransaction();
         try
         {
-            var query = "INSERT INTO employees (id, name, salary, status) VALUES (@id, @name, @salary, @status)";
+            var query = "INSERT INTO employee (id, name, salary, status) VALUES (@id, @name, @salary, @status)";
 
             foreach (var employee in employees)
             {

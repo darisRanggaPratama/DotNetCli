@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gy5CjO75K2k=",
+  "success": true,
+  "projectFilePath": "D:\\up2github\\DotNetCli\\Spectre_Console\\SpectreConsole\\SpectreConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pongo\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512"
+  ],
+  "logs": []
+}

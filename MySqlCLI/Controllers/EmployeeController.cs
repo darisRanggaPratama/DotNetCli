@@ -104,8 +104,7 @@ public class EmployeeController
             return;
         }
 
-        Console.WriteLine();
-        var updated = _view.GetUpdatedEmployeeData(existing);
+        var updated = _view.GetEditEmployeeData(existing);
 
         if (_dbContext.UpdateEmployee(updated))
         {
@@ -115,7 +114,6 @@ public class EmployeeController
         {
             _view.ShowErrorMessage("Gagal memperbarui data karyawan. ID mungkin sudah digunakan oleh karyawan lain.");
         }
-
         _view.WaitForKeyPress();
     }
 

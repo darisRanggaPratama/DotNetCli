@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MySqlCLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+176e3ddf88ac832e9696dec608217f0db2375085")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96a633122fbfaba511b6a5810564f7e7b6773c19")]
 [assembly: System.Reflection.AssemblyProductAttribute("MySqlCLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MySqlCLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
