@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpectreConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17b74e8f56ce78818c7f04fc517f6f0df09b7664")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62ac33795428cd4581308884ef1120ae58463721")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpectreConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpectreConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

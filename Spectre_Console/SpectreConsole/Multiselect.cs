@@ -2,7 +2,7 @@
 
 namespace SpectreConsole;
 
-public class Multiselect
+class Multiselect
 {
     public void MultiSelection()
     {
